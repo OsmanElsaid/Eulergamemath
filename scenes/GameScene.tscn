@@ -1,0 +1,378 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsl4dy1vn8r1s"]
+
+[ext_resource type="Script" path="res://scripts/GameScene.gd" id="1_0cw6h"]
+
+[node name="GameScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_0cw6h")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.15, 0.25, 1)
+
+[node name="CenterPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+
+[node name="CenterVBox" type="VBoxContainer" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="TargetLabel" type="Label" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 40.0
+text = "Target: 000"
+horizontal_alignment = 1
+
+[node name="TurnLabel" type="Label" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 45.0
+offset_right = 50.0
+offset_bottom = 65.0
+text = "Turn: 1"
+horizontal_alignment = 1
+
+[node name="CurrentPlayerLabel" type="Label" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 70.0
+offset_right = 80.0
+offset_bottom = 90.0
+text = "Current Player: "
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 95.0
+offset_right = 40.0
+offset_bottom = 115.0
+text = "Time: 10"
+horizontal_alignment = 1
+
+[node name="LotteryButton" type="Button" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -15.0
+offset_right = 60.0
+offset_bottom = 15.0
+text = "LOTTERY"
+
+[node name="ButtonRow" type="HBoxContainer" parent="CenterPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+
+[node name="FreeButton" type="Button" parent="CenterPanel/ButtonRow"]
+layout_mode = 2
+text = "FREE"
+custom_minimum_size = Vector2(60, 40)
+
+[node name="NoButton" type="Button" parent="CenterPanel/ButtonRow"]
+layout_mode = 2
+text = "NO"
+custom_minimum_size = Vector2(60, 40)
+
+[node name="EndButton" type="Button" parent="CenterPanel/ButtonRow"]
+layout_mode = 2
+text = "END"
+custom_minimum_size = Vector2(60, 40)
+
+[node name="LeftPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.0
+anchor_bottom = 1.0
+offset_right = 200.0
+
+[node name="LeftVBox" type="VBoxContainer" parent="LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="Player1Container" type="Panel" parent="LeftPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 20.0
+offset_right = -10.0
+offset_bottom = 300.0
+
+[node name="PlayerName" type="Label" parent="LeftPanel/Player1Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 30.0
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="Expression" type="Label" parent="LeftPanel/Player1Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 35.0
+offset_right = -10.0
+offset_bottom = 55.0
+text = "Expression:"
+horizontal_alignment = 1
+
+[node name="Numbers" type="Label" parent="LeftPanel/Player1Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 60.0
+offset_right = -10.0
+offset_bottom = 80.0
+text = "Numbers:"
+horizontal_alignment = 1
+
+[node name="Player3Container" type="Panel" parent="LeftPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 320.0
+offset_right = -10.0
+offset_bottom = 600.0
+
+[node name="PlayerName" type="Label" parent="LeftPanel/Player3Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 30.0
+text = "Player 3"
+horizontal_alignment = 1
+
+[node name="Expression" type="Label" parent="LeftPanel/Player3Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 35.0
+offset_right = -10.0
+offset_bottom = 55.0
+text = "Expression:"
+horizontal_alignment = 1
+
+[node name="Numbers" type="Label" parent="LeftPanel/Player3Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 60.0
+offset_right = -10.0
+offset_bottom = 80.0
+text = "Numbers:"
+horizontal_alignment = 1
+
+[node name="RightPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+
+[node name="RightVBox" type="VBoxContainer" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="Player2Container" type="Panel" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 190.0
+offset_bottom = 300.0
+
+[node name="PlayerName" type="Label" parent="RightPanel/Player2Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 30.0
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="Expression" type="Label" parent="RightPanel/Player2Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 35.0
+offset_right = 170.0
+offset_bottom = 55.0
+text = "Expression:"
+horizontal_alignment = 1
+
+[node name="Numbers" type="Label" parent="RightPanel/Player2Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 170.0
+offset_bottom = 80.0
+text = "Numbers:"
+horizontal_alignment = 1
+
+[node name="Player4Container" type="Panel" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 320.0
+offset_right = 190.0
+offset_bottom = 600.0
+
+[node name="PlayerName" type="Label" parent="RightPanel/Player4Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 30.0
+text = "Player 4"
+horizontal_alignment = 1
+
+[node name="Expression" type="Label" parent="RightPanel/Player4Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 35.0
+offset_right = 170.0
+offset_bottom = 55.0
+text = "Expression:"
+horizontal_alignment = 1
+
+[node name="Numbers" type="Label" parent="RightPanel/Player4Container"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 170.0
+offset_bottom = 80.0
+text = "Numbers:"
+horizontal_alignment = 1
+
+[node name="BottomPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+
+[node name="OperationsContainer" type="HBoxContainer" parent="BottomPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="AddButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = "+"
+
+[node name="SubtractButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = "-"
+
+[node name="MultiplyButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = "×"
+
+[node name="DivideButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = "÷"
+
+[node name="OpenParenButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = "("
+
+[node name="CloseParenButton" type="Button" parent="BottomPanel/OperationsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 60)
+text = ")"
